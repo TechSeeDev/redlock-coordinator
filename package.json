@@ -1,7 +1,7 @@
 {
   "name": "@techsee/redlock-coordinator",
   "version": "1.0.1",
-  "description": "Elects a leader by redlock ",
+  "description": "Elects a leader by redlock",
   "license": "MIT",
   "engines": {
     "node": ">= 8.10.0"
