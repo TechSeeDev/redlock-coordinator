@@ -1,5 +1,5 @@
 {
-  "name": "redlock-coordinator",
+  "name": "@techsee/redlock-coordinator",
   "version": "1.0.1",
   "description": "Elects a leader by redlock ",
   "license": "MIT",
@@ -23,7 +23,11 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf lib dist",
+    "prepublishOnly": "npm run tag",
+    "postpublish": "npm run clean",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tag": "git tag v$npm_package_version -f | git push -f --tags"
   },
   "dependencies": {
     "redlock": "^3.1.2"
